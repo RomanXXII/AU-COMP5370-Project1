@@ -1,0 +1,9 @@
+---
+- name: Test Ansible
+  hosts: member_servers
+
+  tasks:
+    - name: Create test file
+      ansible.builtin.file:
+        path: /tmp/ansible-test
+        state: touch
