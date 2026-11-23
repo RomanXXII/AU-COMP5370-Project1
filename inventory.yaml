@@ -1,0 +1,5 @@
+member_servers:
+  hosts:
+    rocky-server-1.lab.local:
+  vars:
+    ansible_user: svc-ansible
