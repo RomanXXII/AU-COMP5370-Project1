@@ -1,0 +1,3 @@
+include MANIFEST.in README.md inventory.yaml test.yml
+recursive-include roles *
+prune .git
