@@ -1,0 +1,14 @@
+---
+- name: Baseline report
+  hosts: member_servers
+  gather_facts: true
+
+  tasks:
+    - name: Write system report
+      ansible.builtin.copy:
+        dest: /tmp/iac-baseline.txt
+        content: |
+          Host: {{ ansible_facts['fqdn'] }}
+          OS: {{ ansible_facts['distribution'] }} {{ ansible_facts['distribution_version'] }}
+          Kernel: {{ ansible_facts['kernel'] }}
+          Managed by: signed IaC pipeline

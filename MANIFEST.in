@@ -1,3 +1,3 @@
-include MANIFEST.in README.md inventory.yaml test.yml
+include MANIFEST.in README.md inventory.yaml test.yml site.yml baseline.yml site.yml baseline.yml
 recursive-include roles *
 prune .git
