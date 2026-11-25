@@ -7,3 +7,8 @@
       ansible.builtin.file:
         path: /tmp/ansible-test
         state: touch
+
+    - name: Write pipeline proof
+      ansible.builtin.copy:
+        dest: /tmp/pipeline-proof.txt
+        content: "Applied by the signed IaC pipeline\n"
